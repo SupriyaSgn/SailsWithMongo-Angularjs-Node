@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HomePage for Medool</title>
+
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+  <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+  <script type="text/javascript">
+    window.SAILS_LOCALS = { _csrf: "<%= _csrf %>" };
+  </script>
+
+</head>
+
+
+
+
+<body style="background-color: black;" ng-app="homepage" ng-controller="homepageController" ng-cloak>
+    
+    
+    
+    <br>
+<div class="container">
+  <div class="card"></div>
+  <div class="card"><br>
+    <h1 class="title">SignIn:</h1>
+    <form class="login-form" ng-submit="submitLoginForm()">
+      <div class="input-container">
+        <input type="text" ng-model="loginForm.email" name="email" id="Username" required="required"/>
+        <label for="Username"  >Username</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" ng-model="loginForm.password" name="password" id="Password" required="required"/>
+        <label for="Password" >Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="button-container">
+        <button type="submit"><span>Go</span></button>
+      </div>
+        <div class="button-container">
+           <a href="/signup"><span>SignUp</span></a>
+      </div><br><br>
+        <div></div>
+<!--      <div class="footer"><a href="#">Forgot your password?</a></div>-->
+    </form>
+  </div>
+  <div class="card alt">
+      <div class="toggle"></div>
+    
+   
+  </div>
+</div>
+
+<!--<div class="top-content">
+
+  <div class="inner-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text">
+
+        </div>
+      </div><br><br>
+      <div class=" row" >
+
+        <div class="well col-sm-5 col-sm-offset-3 form-box">
+
+
+          <div class="form-top">
+            <div class="form-top-left " >
+
+              <h3 style="color: black;font-style: oblique;">Enter your username and password:</h3>
+            </div>
+            <div class="form-top-right">
+              <i class="fa fa-lock"></i>
+            </div>
+          </div>
+          <div class="form-bottom" >
+            <form role="form"  class="login-form" ng-submit="submitLoginForm()">
+              <div class="form-group">
+                <label class="sr-only" for="form-username">Username</label>
+
+                <input type="text" ng-model="loginForm.email" name="email" placeholder="Username..." class="form-username form-control input-lg" id="form-username" style="width: 400px;">
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="form-password">Password</label>
+                <input type="password"  ng-model="loginForm.password" name="password" placeholder="Password..." class="form-password form-control input-lg" id="form-password" style="width: 400px;">
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <button type="submit" class="btn btn-lg btn-primary" style="width: 160px;">
+                    <span ng-show="!loginForm.loading">Sign in</span>
+                    <span ng-show="loginForm.loading" class="fa fa-spinner"></span>
+                    <span ng-show="loginForm.loading">Signing in...</span>
+                  </button>
+
+                </div>
+                <div class="col-sm-8">
+                  <h4 style="color: black;font-style: oblique;">&nbsp;&nbsp;&nbsp;<input type="checkbox" >&nbsp;Remember me!!!</h4>
+                </div>
+
+
+              </div>
+
+              <h4 style="color: black;font-style: oblique;">New User??? then Sign Up!!
+              </h4>
+              <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+              <a href="/signup" class="btn btn-lg btn-success" style="width: 400px;">Sign up now!</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+</div>-->
+
+
+
+
+  </body>
+  </html>

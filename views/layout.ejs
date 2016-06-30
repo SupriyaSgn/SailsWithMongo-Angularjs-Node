@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/angular-toastr.css">
+    <link rel="stylesheet" href="/styles/bootstrap.3.1.1.css">
+    <link rel="stylesheet" href="/styles/angular-bootstrap-calendar.min.css">
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/xeditable.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+
+  <!--<div class="container-fluid">-->
+  <!--&lt;!&ndash; Creates the navbar &ndash;&gt;-->
+  <!--<nav class="navbar navbar-default static-top">-->
+    <!--&lt;!&ndash; This creates the mechanism for collapse button &ndash;&gt;-->
+    <!--<button type="button" class="navbar-toggle" data-toggle="collapse" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">-->
+      <!--&lt;!&ndash; This controls the number of lines in the image when the nav collapse &ndash;&gt;-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+      <!--<span class="icon-bar"></span>-->
+    <!--</button>-->
+
+    <!--&lt;!&ndash; This is the brand on the left-hand side. &ndash;&gt;-->
+    <!--<a class="navbar-brand" href="/#"> Medool</a>-->
+    <!--<div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">-->
+      <!--<form ng-submit="submitLoginForm()" class="navbar-form navbar-right">-->
+        <!--<div  class="form-group">-->
+          <!--<select class="form-control" id="State">-->
+            <!--<option value="Delhi">Delhi</option>-->
+            <!--<option value="NCR">NCR</option>-->
+          <!--</select>-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+
+          <!--<input ng-model="loginForm.email" type="text" placeholder="Email" name="email" class="form-control">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+          <!--<input ng-model="loginForm.password" type="password" placeholder="Password" name="password" class="form-control">-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-success">-->
+          <!--<span ng-show="!loginForm.loading">Sign in</span>-->
+          <!--<span ng-show="loginForm.loading" class="fa fa-spinner"></span>-->
+          <!--<span ng-show="loginForm.loading">Signing in...</span>-->
+        <!--</button>-->
+        <!--<input type="hidden" name="_csrf" value="<%= _csrf %>" />-->
+        <!--<a href="signup" class="btn btn-success">Sign up now!</a>-->
+      <!--</form>-->
+  <!--</nav>-->
+<!--</div>-->
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/angular.js"></script>
+    <script src="/js/dependencies/jquery.min.js"></script>
+    <script src="/js/dependencies/angular-animate.js"></script>
+    <script src="/js/dependencies/angular-bootstrap-calendar-tpls.min.js"></script>
+    <script src="/js/dependencies/angular-route.js"></script>
+    <script src="/js/dependencies/angular-toastr.js"></script>
+    <script src="/js/dependencies/angular-ui-router.min.js"></script>
+    <script src="/js/dependencies/angular-ui.js"></script>
+    <script src="/js/dependencies/bootstrap.js"></script>
+    <script src="/js/dependencies/compareTo.module.js"></script>
+    <script src="/js/dependencies/ui-bootstrap-tpls.min.js"></script>
+    <script src="/js/dependencies/xeditable.js"></script>
+    <script src="/js/homepage/homepageController.js"></script>
+    <script src="/js/private/dashboard/dashboardController.js"></script>
+    <script src="/js/signup/SignupController.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
